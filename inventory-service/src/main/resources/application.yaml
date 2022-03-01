@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: inventory-service
+
+  data:
+    mongodb:
+      uri: mongodb+srv://alisa:a2fUXwK6v8MNrhGf@inventory-service.t6g1z.mongodb.net/inventoryService?retryWrites=true&w=majority
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 256MB
+      enabled: true
+
+server:
+  port: 8200
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+    instance:
+      hostname: localhost
+
+---
+app:
+  swagger-url: http://localhost:8200/swagger-ui.html
