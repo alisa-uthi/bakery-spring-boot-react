@@ -1,17 +1,19 @@
-import { NextPage } from 'next'
-import React from 'react'
 import Header from './Header'
 import Navbar from './Navbar'
-import useWindowSize from './utils/windowSize'
+import useWindowSize from '../utils/windowSize'
+import Footer from './Footer'
 
-const Layout: NextPage = ({ children }) => {
+const Layout = (props: any) => {
   const size = useWindowSize()
 
   return (
     <div>
-      <Header />
-      {size.width >= 768 ? <Navbar /> : null}
-      {children}
+      <div className="relative top-0 left-0 right-0">
+        <Header />
+        {size.width >= 768 ? <Navbar /> : null}
+      </div>
+      {props.children}
+      <Footer />
     </div>
   )
 }
