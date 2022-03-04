@@ -20,8 +20,6 @@ const Header: NextPage = () => {
           <div className="h-4 w-4 rounded-full bg-red-400"></div>
         </div>
       </div>
-
-      <div className="invisible absolute top-36 flex w-full border-b border-gray-300 md:visible"></div>
     </div>
   )
 }
