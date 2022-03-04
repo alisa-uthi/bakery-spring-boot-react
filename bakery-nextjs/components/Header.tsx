@@ -10,6 +10,7 @@ const Header: NextPage = () => {
       >
         Alisa Bakery
       </h1>
+
       <div className="justify-end md:mr-10 md:flex">
         <h3 className="flex w-full cursor-pointer justify-center whitespace-nowrap border-b border-gray-300 py-3 text-2xl font-semibold hover:text-red-800 md:mr-10 md:border-none">
           (780) 489-4142
@@ -19,7 +20,8 @@ const Header: NextPage = () => {
           <div className="h-4 w-4 rounded-full bg-red-400"></div>
         </div>
       </div>
-      <div className="invisible absolute top-24 flex w-full border-b border-gray-300 md:visible"></div>
+
+      <div className="invisible absolute top-36 flex w-full border-b border-gray-300 md:visible"></div>
     </div>
   )
 }
