@@ -10,7 +10,7 @@ const Navbar = () => {
               HOME
             </li>
           </Link>
-          <Link href="/">
+          <Link href="/about-us">
             <li className="text-md cursor-pointer font-semibold tracking-wider text-gray-500 hover:font-bold hover:text-yellow-700">
               ABOUT US
             </li>

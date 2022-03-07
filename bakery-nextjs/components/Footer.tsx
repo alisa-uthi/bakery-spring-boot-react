@@ -3,7 +3,7 @@ import Button from './Button'
 
 const Footer = () => {
   return (
-    <div className="bg-gray-800 text-gray-300">
+    <footer className="bottom-0 w-full bg-gray-800 text-gray-300">
       <div className="mx-auto flex max-w-4xl items-start justify-around py-5 md:justify-between md:px-10">
         <div className="md:flex">
           <div className="">
@@ -18,7 +18,7 @@ const Footer = () => {
             <Link href="/">
               <p className="cursor-pointer text-sm">Shop</p>
             </Link>
-            <Link href="/">
+            <Link href="/about-us">
               <p className="cursor-pointer text-sm">About Us</p>
             </Link>
             <Link href="/">
@@ -33,7 +33,7 @@ const Footer = () => {
       <div className="border-t border-gray-500 py-3 text-center text-sm ">
         Copyright © 2022 - Alisa Bakery
       </div>
-    </div>
+    </footer>
   )
 }
 
