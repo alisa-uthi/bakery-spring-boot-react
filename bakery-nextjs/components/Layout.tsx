@@ -8,7 +8,7 @@ const Layout = (props: any) => {
 
   return (
     <div>
-      <div className="relative top-0 left-0 right-0">
+      <div className="sticky top-0 left-0 right-0 z-50">
         <Header />
         {size.width >= 768 ? <Navbar /> : null}
       </div>

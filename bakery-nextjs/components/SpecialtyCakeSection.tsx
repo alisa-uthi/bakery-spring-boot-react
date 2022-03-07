@@ -16,7 +16,7 @@ const SpecialtyCakeSection = () => {
         className="relative z-0"
       />
 
-      <div className="absolute z-50 mr-5 md:mr-16 lg:mr-20">
+      <div className="absolute z-30 mr-5 md:mr-16 lg:mr-20">
         <h1 className="mb-5 text-2xl font-bold text-gray-800 lg:text-3xl">
           Specialty Cakes
         </h1>

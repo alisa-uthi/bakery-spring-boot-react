@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const BannerSection = () => {
   return (
-    <div className="relative border-b border-gray-300 pb-10 md:mt-4 md:pb-0">
+    <div className="relative border-b border-gray-300 pb-10 md:pb-0">
       <Image
         src="/images/home-banner.jpg"
         height={700}
