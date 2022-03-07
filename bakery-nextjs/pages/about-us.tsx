@@ -7,7 +7,7 @@ const AboutUs = () => {
         <title>About Us</title>
       </Head>
 
-      <div className="auto h-screen w-full p-10">
+      <div className="h-screen w-full p-10">
         <h1 className="mb-2 text-4xl font-bold text-yellow-800">
           About Alisa Bakery
         </h1>

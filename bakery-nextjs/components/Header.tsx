@@ -2,7 +2,7 @@ import { ShoppingCartIcon } from '@heroicons/react/solid'
 
 const Header = () => {
   return (
-    <div className="mt-6 bg-white md:flex">
+    <div className="bg-white pt-6 md:flex">
       <h1
         className="flex w-full justify-center border-b border-gray-300 py-3 text-4xl font-bold text-yellow-800
 			md:ml-20 md:flex-grow md:border-none"

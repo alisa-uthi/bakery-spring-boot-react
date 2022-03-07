@@ -35,7 +35,7 @@ const Navbar = () => {
               COOKIES
             </li>
           </Link>
-          <Link href="/">
+          <Link href="/contact-us">
             <li className="text-md cursor-pointer font-semibold tracking-wider text-gray-500 hover:font-bold hover:text-yellow-700">
               CONTACT US
             </li>
