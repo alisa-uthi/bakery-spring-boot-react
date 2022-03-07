@@ -7,7 +7,7 @@ const Header = () => {
         className="flex w-full justify-center border-b border-gray-300 py-3 text-4xl font-bold text-yellow-800
 			md:ml-20 md:flex-grow md:border-none"
       >
-        -------- Alisa Bakery --------
+        ------ Alisa Bakery ------
       </h1>
 
       <div className="justify-end md:mr-10 md:flex">

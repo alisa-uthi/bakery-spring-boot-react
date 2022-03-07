@@ -4,7 +4,7 @@ import ViewProductCart from './ViewProductCart'
 const ServiceSection = () => {
   return (
     <div>
-      <div className="mx-10 mt-10 pb-10 text-center md:mt-20 lg:mt-32">
+      <div className="mx-10 mt-10 pb-10 text-center ">
         <h1 className="text-3xl font-semibold text-yellow-800">Alisa Bakery</h1>
         <h3 className="mt-2 font-medium">WHOLESALE BAKERY IN WONDERLAND</h3>
         <br />
