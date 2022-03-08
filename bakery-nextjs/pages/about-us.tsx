@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-const AboutUs = () => {
+const AboutUsPage = () => {
   return (
     <div>
       <Head>
@@ -38,4 +38,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs
+export default AboutUsPage

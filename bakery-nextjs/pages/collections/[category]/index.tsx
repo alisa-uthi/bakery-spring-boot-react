@@ -2,15 +2,15 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import ProductCard from '../../components/ProductCard'
-import { Product } from '../../models/product'
-import { BASE_API_URL } from '../../utils/constant'
+import ProductCard from '../../../components/ProductCard'
+import { Product } from '../../../models/product'
+import { BASE_API_URL } from '../../../utils/constant'
 
-interface ProductListProps {
+interface ProductListPageProps {
   products: []
 }
 
-const ProductList = ({ products }: ProductListProps) => {
+const ProductListPage = ({ products }: ProductListPageProps) => {
   const router = useRouter()
   const { category } = router.query
 
@@ -40,7 +40,11 @@ const ProductList = ({ products }: ProductListProps) => {
 
         <div className="mx-auto md:flex md:max-w-4xl md:flex-wrap md:items-center md:justify-around">
           {products.map((product: Product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard
+              key={product.id}
+              product={product}
+              category={category}
+            />
           ))}
         </div>
       </div>
@@ -77,4 +81,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
 }
 
-export default ProductList
+export default ProductListPage

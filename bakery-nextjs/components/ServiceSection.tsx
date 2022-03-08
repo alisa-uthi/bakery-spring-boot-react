@@ -26,17 +26,17 @@ const ServiceSection = () => {
         <ViewProductCart
           imageSrc="/images/bread-banner.jpg"
           title="BREAD"
-          linkTo="/product/bread"
+          linkTo="/collections/bread"
         />
         <ViewProductCart
           imageSrc="/images/cake-banner.jpg"
           title="CAKES"
-          linkTo="/product/cake"
+          linkTo="/collections/cake"
         />
         <ViewProductCart
           imageSrc="/images/pastry-banner.jpg"
           title="PASTRIES"
-          linkTo="/product/pastry"
+          linkTo="/collections/pastry"
         />
       </div>
     </div>

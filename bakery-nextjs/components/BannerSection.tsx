@@ -19,7 +19,7 @@ const BannerSection = () => {
         <h1 className="my-4 text-4xl font-extrabold text-white md:mt-10 md:mb-6 md:text-5xl">
           Breads, Cakes, Pastries, and much more !!
         </h1>
-        <Button to="/product/bread" title="SHOP NOW" />
+        <Button to="/collections/bread" title="SHOP NOW" />
       </div>
     </div>
   )

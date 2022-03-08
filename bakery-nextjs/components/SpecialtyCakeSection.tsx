@@ -20,7 +20,7 @@ const SpecialtyCakeSection = () => {
         <h1 className="mb-5 text-2xl font-bold text-gray-800 lg:text-3xl">
           Specialty Cakes
         </h1>
-        <Button to="/product/cake" title="VIEW PRODUCTS" />
+        <Button to="/collections/cake" title="VIEW PRODUCTS" />
       </div>
     </div>
   )

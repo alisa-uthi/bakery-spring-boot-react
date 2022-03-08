@@ -15,7 +15,7 @@ const Footer = () => {
             <Link href="/">
               <p className="cursor-pointer text-sm">Home</p>
             </Link>
-            <Link href="/product/bread">
+            <Link href="/collections/bread">
               <p className="cursor-pointer text-sm">Shop</p>
             </Link>
             <Link href="/about-us">

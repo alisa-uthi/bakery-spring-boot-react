@@ -5,7 +5,7 @@ import HomeContactSection from '../components/HomeContactSection'
 import ServiceSection from '../components/ServiceSection'
 import SpecialtyCakeSection from '../components/SpecialtyCakeSection'
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div>
       <Head>
@@ -21,4 +21,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomePage
