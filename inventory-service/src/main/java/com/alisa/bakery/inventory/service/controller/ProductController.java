@@ -30,6 +30,12 @@ public class ProductController {
             @RequestParam(value = "category", required = false) String category
     ) throws BaseException {
         if(category != null) {
+            if(category.equals("bread")) {
+                List<ProductResponse> breads = productService.getProductsByCategory(category);
+                List<ProductResponse> bagels = productService.getProductsByCategory("bagel");
+                breads.addAll(bagels);
+                return ResponseEntity.ok(breads);
+            }
             return ResponseEntity.ok(productService.getProductsByCategory(category));
         }
         return ResponseEntity.ok(productService.getAllProducts());
