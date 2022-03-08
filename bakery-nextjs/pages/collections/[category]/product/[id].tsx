@@ -9,6 +9,7 @@ import { Product } from '../../../../models/product'
 import { BASE_API_URL } from '../../../../utils/constant'
 import { addItemToCart } from '../../../../slices/cartSlice'
 import { useAppDispatch } from '../../../../app/hooks'
+import { useRouter } from 'next/router'
 
 interface ProductDetailPageProps {
   product: Product
@@ -20,6 +21,7 @@ const ProductDetailPage = ({
   suggestedProducts,
 }: ProductDetailPageProps) => {
   const dispatch = useAppDispatch()
+  const router = useRouter()
   const [quantity, setQuantity] = useState(1)
 
   const handleIncreaseQuantity = () => {
@@ -38,6 +40,7 @@ const ProductDetailPage = ({
     const addedItem = {
       productId: product.id,
       productName: product.name,
+      productImage: product.image,
       quantity: quantity,
       price: product.price,
       totalPrice: product.price * quantity,
@@ -45,6 +48,7 @@ const ProductDetailPage = ({
 
     dispatch(addItemToCart(addedItem))
     setQuantity(1)
+    router.push('/cart')
   }
 
   return (
@@ -54,7 +58,7 @@ const ProductDetailPage = ({
       </Head>
 
       {/* Product Detail */}
-      <div className="mx-auto w-full max-w-6xl p-8 md:flex md:items-start md:justify-evenly">
+      <div className="mx-auto w-full max-w-6xl p-8 md:flex md:items-start md:justify-evenly md:space-x-5">
         <div className="relative mx-auto h-96 w-96 shadow-lg md:mx-0">
           <Image
             src={'data:image/png;base64,' + product.image}
