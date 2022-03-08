@@ -14,7 +14,7 @@ const HomeContactSection = () => {
         }}
         className="relative z-0"
       />
-      <div className="absolute z-50 p-10 text-center text-white md:text-black">
+      <div className="absolute z-30 p-10 text-center text-white md:text-black">
         <h1 className="text-3xl font-semibold ">Contact Alisa Bakery</h1>
         <h3 className="my-3 font-medium">
           Your Bread, Cake, and Pastry Bakery in Wonderland

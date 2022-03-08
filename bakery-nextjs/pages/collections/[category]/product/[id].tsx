@@ -1,10 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
+
 import { GetStaticPaths, GetStaticProps } from 'next/types'
 import React, { useState } from 'react'
+
 import ProductCard from '../../../../components/ProductCard'
 import { Product } from '../../../../models/product'
 import { BASE_API_URL } from '../../../../utils/constant'
+import { addItemToCart } from '../../../../slices/cartSlice'
+import { useAppDispatch } from '../../../../app/hooks'
 
 interface ProductDetailPageProps {
   product: Product
@@ -15,6 +19,7 @@ const ProductDetailPage = ({
   product,
   suggestedProducts,
 }: ProductDetailPageProps) => {
+  const dispatch = useAppDispatch()
   const [quantity, setQuantity] = useState(1)
 
   const handleIncreaseQuantity = () => {
@@ -27,6 +32,19 @@ const ProductDetailPage = ({
     } else {
       setQuantity(1)
     }
+  }
+
+  const handleAddItem = () => {
+    const addedItem = {
+      productId: product.id,
+      productName: product.name,
+      quantity: quantity,
+      price: product.price,
+      totalPrice: product.price * quantity,
+    }
+
+    dispatch(addItemToCart(addedItem))
+    setQuantity(1)
   }
 
   return (
@@ -71,7 +89,9 @@ const ProductDetailPage = ({
             </div>
 
             <div className="border-l border-gray-200 p-3 md:p-6">
-              <button className="btn">ADD TO CART</button>
+              <button className="btn" onClick={handleAddItem}>
+                ADD TO CART
+              </button>
             </div>
           </div>
         </div>
@@ -133,3 +153,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 }
 
 export default ProductDetailPage
+function useDispatch() {
+  throw new Error('Function not implemented.')
+}
