@@ -69,6 +69,11 @@ public class ProductController {
         return ResponseEntity.ok().build();
     }
 
+    @GetMapping("categories")
+    public ResponseEntity<List<String>> getProductCategories() throws BaseException {
+        return ResponseEntity.ok(productService.getAllProductCategories());
+    }
+
     @GetMapping("name/{name}")
     public ResponseEntity<ProductResponse> getProductByName(@PathVariable("name") String name) throws BaseException {
         return ResponseEntity.ok(productService.getProductByName(name));

@@ -71,6 +71,11 @@ public class ProductService {
                 .collect(Collectors.toList());
     }
 
+    public List<String> getAllProductCategories() throws BaseException {
+        log.info("Get all product categories");
+        return productRepository.findDistinctCategory();
+    }
+
     public ProductResponse addProduct(ProductRequest productRequest, MultipartFile file) throws BaseException, IOException {
         log.info("Add new product: {}", productRequest.getName());
 
