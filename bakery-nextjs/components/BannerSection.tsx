@@ -6,8 +6,6 @@ const BannerSection = () => {
     <div className="relative border-b border-gray-300 pb-10 md:pb-0">
       <Image
         src="/images/home-banner.jpg"
-        height={700}
-        width={1000}
         layout="fill"
         objectFit="cover"
         className="mt-0 pt-0"
@@ -21,7 +19,7 @@ const BannerSection = () => {
         <h1 className="my-4 text-4xl font-extrabold text-white md:mt-10 md:mb-6 md:text-5xl">
           Breads, Cakes, Pastries, and much more !!
         </h1>
-        <Button to="/" title="SHOP NOW" />
+        <Button to="/product/bread" title="SHOP NOW" />
       </div>
     </div>
   )

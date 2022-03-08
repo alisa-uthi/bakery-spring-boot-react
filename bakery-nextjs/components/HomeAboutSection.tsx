@@ -14,7 +14,7 @@ const HomeAboutSection = () => {
             reiciendis ullam officia itaque asperiores suscipit. Optio dolorem
             repellat autem soluta eos!
           </p>
-          <Button to="/" title="READ MORE" />
+          <Button to="/about-us" title="READ MORE" />
         </div>
       </div>
     </div>

@@ -15,22 +15,22 @@ const Navbar = () => {
               ABOUT US
             </li>
           </Link>
-          <Link href="/">
+          <Link href="/product/bread">
             <li className="text-md cursor-pointer font-semibold tracking-wider text-gray-500 hover:font-bold hover:text-yellow-700">
               BREAD
             </li>
           </Link>
-          <Link href="/">
+          <Link href="/product/cake">
             <li className="text-md cursor-pointer font-semibold tracking-wider text-gray-500 hover:font-bold hover:text-yellow-700">
               CAKES
             </li>
           </Link>
-          <Link href="/">
+          <Link href="/product/pastry">
             <li className="text-md cursor-pointer font-semibold tracking-wider text-gray-500 hover:font-bold hover:text-yellow-700">
               PASTRIES
             </li>
           </Link>
-          <Link href="/">
+          <Link href="/product/cookie">
             <li className="text-md cursor-pointer font-semibold tracking-wider text-gray-500 hover:font-bold hover:text-yellow-700">
               COOKIES
             </li>

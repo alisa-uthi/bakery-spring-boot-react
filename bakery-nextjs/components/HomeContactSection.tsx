@@ -19,12 +19,12 @@ const HomeContactSection = () => {
         <h3 className="my-3 font-medium">
           Your Bread, Cake, and Pastry Bakery in Wonderland
         </h3>
-        <Button to="/" title="WHOLESALE PRICING AVAILABLE" />
+        <Button to="/product/bread" title="WHOLESALE PRICING AVAILABLE" />
         <h3 className="mt-6 text-lg font-medium">Business Hours:</h3>
         <h2 className="mt-2 mb-5 text-xl font-medium">
           Mon To Fri: 9 AM to 5 PM | Sat &amp; Sun: Closed
         </h2>
-        <Button to="/" title="GET IN TOUCH" />
+        <Button to="/contact-us" title="GET IN TOUCH" />
       </div>
     </div>
   )
