@@ -15,9 +15,29 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addItemToCart: (state, action: PayloadAction<CartItem>) => {
-      state.items = [...state.items, action.payload]
+      let adjustedItem = state.items.find(
+        (item: CartItem) => item.productId == action.payload.productId
+      )
+
+      // If there is existing item in the cart, add more quantity and total price
+      if (adjustedItem) {
+        adjustedItem = {
+          ...adjustedItem,
+          quantity: adjustedItem.quantity + action.payload.quantity,
+          totalPrice: adjustedItem.totalPrice + action.payload.totalPrice,
+        }
+
+        state.items = state.items.map((item: CartItem) => {
+          if (item.productId == adjustedItem?.productId) {
+            return adjustedItem
+          }
+          return item
+        })
+      } else {
+        state.items = [...state.items, action.payload]
+      }
     },
-    removeItemToCart: (state, action: PayloadAction<string>) => {
+    removeItemFromCart: (state, action: PayloadAction<string>) => {
       state.items = state.items.filter(
         (item: CartItem) => item.productName != action.payload
       )
@@ -31,6 +51,7 @@ export const cartSlice = createSlice({
           return {
             ...item,
             quantity: item.quantity + 1,
+            totalPrice: (item.quantity + 1) * item.price,
           }
         }
         return item
@@ -46,11 +67,13 @@ export const cartSlice = createSlice({
             return {
               ...item,
               quantity: item.quantity - 1,
+              totalPrice: (item.quantity - 1) * item.price,
             }
           } else {
             return {
               ...item,
               quantity: 1,
+              totalPrice: item.price,
             }
           }
         }
@@ -63,6 +86,7 @@ export const cartSlice = createSlice({
           return {
             ...item,
             quantity: action.payload.quantity!,
+            totalPrice: action.payload.quantity! * item.price,
           }
         }
         return item
@@ -74,7 +98,7 @@ export const cartSlice = createSlice({
 // Actions
 export const {
   addItemToCart,
-  removeItemToCart,
+  removeItemFromCart,
   increaseQuantity,
   decreaseQuantity,
   adjustQuantity,

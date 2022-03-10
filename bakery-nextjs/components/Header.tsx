@@ -1,10 +1,21 @@
 import { ShoppingCartIcon } from '@heroicons/react/solid'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import { useAppSelector } from '../app/hooks'
 import { selectCartItems } from '../slices/cartSlice'
 
 const Header = () => {
   const cartItems = useAppSelector(selectCartItems)
+  const [cartQuantity, setCartQuantity] = useState(0)
+
+  useEffect(() => {
+    setCartQuantity(
+      cartItems.reduce(
+        (previousValue, item) => previousValue + item.quantity,
+        0
+      )
+    )
+  }, [cartItems])
 
   return (
     <div className="bg-white pt-2 md:flex">
@@ -22,7 +33,7 @@ const Header = () => {
           <div className="relative flex w-full cursor-pointer justify-center border-b border-gray-300 py-3 px-1 shadow-md md:w-fit md:items-center md:whitespace-nowrap md:border-none md:shadow-none">
             <ShoppingCartIcon className="h-7 w-7" />
             <div className="absolute top-2 ml-6 h-4 w-5 rounded-full bg-orange-300 pb-5 text-center text-sm md:top-2 md:right-0 md:ml-0">
-              {cartItems.length > 9 ? '9+' : cartItems.length}
+              {cartQuantity > 9 ? '9+' : cartQuantity}
             </div>
           </div>
         </Link>
