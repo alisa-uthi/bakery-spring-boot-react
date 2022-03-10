@@ -20,7 +20,7 @@ const CartPage = () => {
         <title>My Cart | Alisa Bakery</title>
       </Head>
 
-      <div className="mx-auto h-screen w-full max-w-6xl p-10">
+      <div className="mx-auto min-h-screen w-full max-w-6xl p-10">
         <h1 className="text-2xl font-bold text-yellow-800">My Cart</h1>
         <PickupDateSection
           selectedDate={pickupDate}
@@ -35,7 +35,7 @@ const CartPage = () => {
             <Button to={'/collections/bread'} title="RETURN TO SHOP" />
           </div>
           <div className="w-1/2 text-right">
-            <Button to={'/'} title="CHECKOUT" />
+            <Button to={'/cart/checkout'} title="CHECKOUT" />
           </div>
         </div>
       </div>
