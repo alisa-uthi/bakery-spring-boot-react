@@ -97,6 +97,7 @@ export const cartSlice = createSlice({
     changePickupDate: (state, action: PayloadAction<Date>) => {
       state.pickupDate = action.payload.toString()
     },
+    clearCart: () => initialState,
   },
 })
 
@@ -108,6 +109,7 @@ export const {
   decreaseQuantity,
   adjustQuantity,
   changePickupDate,
+  clearCart,
 } = cartSlice.actions
 
 // Selectors

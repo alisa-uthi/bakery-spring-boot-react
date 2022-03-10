@@ -8,9 +8,13 @@ const CartItemList = () => {
 
   return (
     <div className="mt-5 rounded border-2 border-gray-200 p-3">
-      {cartItems.map((item: CartItem, index: number) => (
-        <CartItemRow key={index} item={item} />
-      ))}
+      {cartItems.length ? (
+        cartItems.map((item: CartItem, index: number) => (
+          <CartItemRow key={index} item={item} />
+        ))
+      ) : (
+        <h1 className="text-center">Cart is empty.</h1>
+      )}
     </div>
   )
 }

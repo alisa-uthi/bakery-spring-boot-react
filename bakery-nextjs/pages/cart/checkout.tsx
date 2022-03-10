@@ -1,11 +1,16 @@
 import Head from 'next/head'
+import { useAppDispatch } from '../../app/hooks'
 import BillingAddressForm from '../../components/BillingAddressForm'
 import CustomerInformationForm from '../../components/CustomerInformationForm'
 import OrderSummary from '../../components/OrderSummary'
 import PaymentMethod from '../../components/PaymentMethod'
+import { clearCart } from '../../slices/cartSlice'
 
 const CheckoutPage = () => {
+  const dispatch = useAppDispatch()
+
   const handleCheckout = () => {
+    dispatch(clearCart())
     alert('This service is not available yet.')
   }
 
