@@ -9,6 +9,7 @@ const BannerSection = () => {
         layout="fill"
         objectFit="cover"
         className="mt-0 pt-0"
+        loading="eager"
         alt="Home Banner"
       />
       <div className="relative w-3/5 p-10 text-center md:z-10 md:py-28">

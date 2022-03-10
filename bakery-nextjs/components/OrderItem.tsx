@@ -21,6 +21,7 @@ const OrderItem = ({ item }: OrderItemProps) => {
         <Image
           src={'data:image/png;base64,' + item.productImage}
           layout="fill"
+          alt={item.productName}
         />
       </div>
 
