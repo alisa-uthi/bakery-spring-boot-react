@@ -4,10 +4,12 @@ import { RootState } from '../app/store'
 
 export interface CartState {
   items: CartItem[]
+  pickupDate?: Date | null
 }
 
 const initialState: CartState = {
   items: [],
+  pickupDate: null,
 }
 
 export const cartSlice = createSlice({
@@ -92,6 +94,9 @@ export const cartSlice = createSlice({
         return item
       })
     },
+    changePickupDate: (state, action: PayloadAction<Date>) => {
+      state.pickupDate = action.payload
+    },
   },
 })
 
@@ -102,9 +107,11 @@ export const {
   increaseQuantity,
   decreaseQuantity,
   adjustQuantity,
+  changePickupDate,
 } = cartSlice.actions
 
 // Selectors
 export const selectCartItems = (state: RootState) => state.cart.items
+export const selectPickupDate = (state: RootState) => state.cart.pickupDate
 
 export default cartSlice.reducer

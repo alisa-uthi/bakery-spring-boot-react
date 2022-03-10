@@ -4,8 +4,17 @@ import SubtotalSection from '../components/SubtotalSection'
 import CartItemList from '../components/CartItemList'
 import PickupDateSection from '../components/PickupDateSection'
 import Button from '../components/Button'
+import { useAppDispatch, useAppSelector } from '../app/hooks'
+import { changePickupDate, selectPickupDate } from '../slices/cartSlice'
 
 const CartPage = () => {
+  const pickupDate = useAppSelector(selectPickupDate)
+  const dispatch = useAppDispatch()
+
+  const handleChangePickupDate = (date: Date) => {
+    dispatch(changePickupDate(date))
+  }
+
   return (
     <div>
       <Head>
@@ -14,7 +23,10 @@ const CartPage = () => {
 
       <div className="mx-auto h-screen w-full max-w-6xl p-10">
         <h1 className="text-2xl font-bold text-yellow-800">My Cart</h1>
-        <PickupDateSection />
+        <PickupDateSection
+          selectedDate={pickupDate}
+          onChange={(date: Date) => handleChangePickupDate(date)}
+        />
         <CartItemList />
         <SubtotalSection />
 
