@@ -2,7 +2,7 @@ import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 
 interface PickupDateSectionProps {
-  selectedDate: Date | null | undefined
+  selectedDate: string | null | undefined
   onChange: (date: Date) => void
 }
 
@@ -17,7 +17,7 @@ const PickupDateSection = ({
       </h2>
       <DatePicker
         className="w-60 rounded border border-gray-300 px-2 py-1 focus:outline-none"
-        selected={selectedDate}
+        selected={new Date(selectedDate!)}
         onChange={onChange}
         showTimeSelect
         timeFormat="HH:mm"

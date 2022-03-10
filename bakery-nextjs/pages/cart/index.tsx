@@ -1,11 +1,10 @@
 import Head from 'next/head'
-
-import SubtotalSection from '../components/SubtotalSection'
-import CartItemList from '../components/CartItemList'
-import PickupDateSection from '../components/PickupDateSection'
-import Button from '../components/Button'
-import { useAppDispatch, useAppSelector } from '../app/hooks'
-import { changePickupDate, selectPickupDate } from '../slices/cartSlice'
+import { useAppDispatch, useAppSelector } from '../../app/hooks'
+import Button from '../../components/Button'
+import CartItemList from '../../components/CartItemList'
+import PickupDateSection from '../../components/PickupDateSection'
+import SubtotalSection from '../../components/SubtotalSection'
+import { changePickupDate, selectPickupDate } from '../../slices/cartSlice'
 
 const CartPage = () => {
   const pickupDate = useAppSelector(selectPickupDate)

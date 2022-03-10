@@ -4,7 +4,7 @@ import { RootState } from '../app/store'
 
 export interface CartState {
   items: CartItem[]
-  pickupDate?: Date | null
+  pickupDate?: string | null
 }
 
 const initialState: CartState = {
@@ -95,7 +95,7 @@ export const cartSlice = createSlice({
       })
     },
     changePickupDate: (state, action: PayloadAction<Date>) => {
-      state.pickupDate = action.payload
+      state.pickupDate = action.payload.toString()
     },
   },
 })
