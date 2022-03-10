@@ -4,7 +4,7 @@ import { LocationMarkerIcon } from '@heroicons/react/outline'
 import Image from 'next/image'
 import ContactUsForm from '../components/ContactUsForm'
 
-const ContactUs = () => {
+const ContactUsPage = () => {
   return (
     <div>
       <Head>
@@ -57,4 +57,4 @@ const ContactUs = () => {
   )
 }
 
-export default ContactUs
+export default ContactUsPage

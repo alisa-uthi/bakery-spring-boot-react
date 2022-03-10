@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-lg">
       <div className="mx-auto max-w-4xl">
-        <ul className="mx-4 flex items-center justify-between pt-5 pb-3">
+        <ul className="mx-4 flex items-center justify-between pt-4 pb-3">
           <Link href="/">
             <li className="text-md cursor-pointer font-semibold tracking-wider text-gray-500 hover:font-bold hover:text-yellow-700">
               HOME
@@ -15,22 +15,22 @@ const Navbar = () => {
               ABOUT US
             </li>
           </Link>
-          <Link href="/">
+          <Link href="/collections/bread">
             <li className="text-md cursor-pointer font-semibold tracking-wider text-gray-500 hover:font-bold hover:text-yellow-700">
               BREAD
             </li>
           </Link>
-          <Link href="/">
+          <Link href="/collections/cake">
             <li className="text-md cursor-pointer font-semibold tracking-wider text-gray-500 hover:font-bold hover:text-yellow-700">
               CAKES
             </li>
           </Link>
-          <Link href="/">
+          <Link href="/collections/pastry">
             <li className="text-md cursor-pointer font-semibold tracking-wider text-gray-500 hover:font-bold hover:text-yellow-700">
               PASTRIES
             </li>
           </Link>
-          <Link href="/">
+          <Link href="/collections/cookie">
             <li className="text-md cursor-pointer font-semibold tracking-wider text-gray-500 hover:font-bold hover:text-yellow-700">
               COOKIES
             </li>

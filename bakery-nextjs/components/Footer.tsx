@@ -15,7 +15,7 @@ const Footer = () => {
             <Link href="/">
               <p className="cursor-pointer text-sm">Home</p>
             </Link>
-            <Link href="/">
+            <Link href="/collections/bread">
               <p className="cursor-pointer text-sm">Shop</p>
             </Link>
             <Link href="/about-us">
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <Button to="/" title="JOIN OUR MAILING LIST" />
+        <Button to="/contact-us" title="JOIN OUR MAILING LIST" />
       </div>
 
       <div className="border-t border-gray-500 py-3 text-center text-sm ">
